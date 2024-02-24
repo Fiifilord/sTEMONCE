@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STEM Company</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap">
+  <style>
+    /* Updated CSS styles */
+    body {
+      background-image: url('IMAGES/2148571360.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      font-size: 12px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      letter-spacing: 1.4px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding: 10px;
+    }
+
+    /* Styles for the form */
+    #submit {
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 50px;
+      text-align: center; 
+    }
+
+    #submit h2 {
+      font-family: 'Yanone Kaffeesatz', sans-serif;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    #submit form {
+      font-family: 'Yanone Kaffeesatz', sans-serif;
+      color: #333;
+    }
+
+    #submit label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    #submit input[type="text"],
+    #submit textarea,
+    #submit input[type="file"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    #submit button[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    #submit button[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="IMAGES/once_logo.png" alt="Company Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Project.html">Projects</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="Project.html" class="cta-btn">Submit Your Project</a> 
+  </header>
+
+  <!-- Project Submission Section -->
+  <section id="submit" class="container">
+    <h2>Submit Your Project</h2>
+    <form action="submit_project.php" method="POST" enctype="multipart/form-data">
+      <label for="projectTitle">Project Title:</label>
+      <input type="text" id="projectTitle" class="feedback-input" name="projectTitle" required><br><br>
+
+      <label for="projectDescription">Project Description:</label><br>
+      <textarea id="projectDescription" class="feedback-input" name="projectDescription" rows="4" cols="50" required></textarea><br><br>
+
+      <label for="projectFile">Upload Project File:</label>
+      <input type="file" id="projectFile"class="feedback-input"  name="projectFile" accept=".pdf, .doc, .docx, .ppt, .pptx, .zip" required><br><br>
+
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  
+
+</body>
+</html>
